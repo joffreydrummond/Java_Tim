@@ -2,19 +2,25 @@ package com.jed.firstandlastdigitsum;
 
 public class firstLastDigitSum {
   public static void main(String[] args) {
-    System.out.println("The sum of the first and last digits are = " + sumFirstAndLastDigit(434));
+    System.out.println("The sum of the first and last digits are = " + sumFirstAndLastDigit(43334));
   }
 
   public static int sumFirstAndLastDigit(int number) {
+    if (number < 0){
+      return -1;
+    }
+
+    //removes last digit from number
     int lastDig = number % 10;
 
-    while (number != 0) {
-   
-      number /= 10;
-//      sum = (lastDig);
-      return number;
+    //while number still has double digits - (since we want to add the first and last digits) remove
+    while (number > 9) {
+         number /= 10;
+         //shows the numbers being chopped until they are single digits
+      System.out.println(number);
     }
-    return -1;
+    //return the value of the last digit and the final digit remaining
+    return lastDig + number;
   }
 }
 
