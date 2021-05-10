@@ -2,19 +2,20 @@ package com.jed.allFactors;
 
 public class allFactors {
   public static void main(String[] args) {
-    printFactors(32);
+    printFactors(-1);
   }
 
-  public static int printFactors(int number) {
+  public static void printFactors(int number) {
     if (number < 1) {
       System.out.println("Invalid number...");
     }
     for (int i = 1; i <= number; i++) {
-      if (number % i == 0) { //if number % i == 0 then i is a factor. print i
+      if (number % i == 0) { // if number % i == 0 then i is a factor. print i
         System.out.println("These are the factors of " + i);
+      } else {
+        System.out.println("Invalid number...");
       }
     }
-    return number;
   }
 }
 
