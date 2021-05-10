@@ -1,4 +1,4 @@
-package com.jed.digitsum;
+package com.jed.digitSum;
 
 public class Main {
 

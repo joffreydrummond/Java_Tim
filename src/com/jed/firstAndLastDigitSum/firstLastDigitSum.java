@@ -1,4 +1,4 @@
-package com.jed.firstandlastdigitsum;
+package com.jed.firstAndLastDigitSum;
 
 public class firstLastDigitSum {
   public static void main(String[] args) {
