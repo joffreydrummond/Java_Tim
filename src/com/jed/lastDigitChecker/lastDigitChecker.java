@@ -3,17 +3,23 @@ package com.jed.lastDigitChecker;
 public class lastDigitChecker {
   public static void main(String[] args) {
     System.out.println(hasSameLastDigit(9, 99, 999));
+    System.out.println(isValid(1051));
   }
 
   public static boolean hasSameLastDigit(int a, int b, int c){
-      if ((a < 10 || a > 1000) || (b < 10 || b > 1000) || (c < 10 || c > 1000)){
+      //if isValid is not true return false
+      if (!isValid(a) || !isValid(b) || !isValid(c)){
           return false;
       }
-//      ((a % 10 == b % 10) || (a % 10 == c % 10) || (b % 10 == c % 10))
-
+      //return true if any of the params have matching right numbers.
+      // use remainder to check against each
       return ((a % 10 == b % 10) || (a % 10 == c % 10) || (b % 10 == c % 10));
   }
 
+  public static boolean isValid(int a){
+      //if a is greater than or equal to 10 ir less than or equal to 1000 return true
+       return (a >=10 && a <= 1000);
+  }
 
 }
 
