@@ -9,9 +9,9 @@ public class numbersToWords {
     if (number < 0) System.out.println("Invalid Value");
 
     for (int i = 0; i < number; i++) {
-      int lastDigitOfNumber = number % 10; //sets variable to last digit in the number
+      int digit = number % 10; //sets variable to last digit in the number
       number /= 10; // sets number to the remaining digits
-      switch (lastDigitOfNumber) {
+      switch (digit) {
         case 0:
           System.out.println("Zero");
           break;
