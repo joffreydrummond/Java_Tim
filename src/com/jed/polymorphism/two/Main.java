@@ -14,15 +14,15 @@ class Car {
   }
 
   public String startEngine() {
-    return "The engine has been started";
+    return getClass().getSimpleName() + " " + "Car=> The engine has been started";
   }
 
   public String accelerate() {
-    return "The car is accelerating";
+    return getClass().getSimpleName() + " " + "Car=> The car is accelerating";
   }
 
   public String brakeCar() {
-    return "The car is slowing down";
+    return getClass().getSimpleName() + " " + "Car=> The car is slowing down";
   }
 }
 
@@ -34,17 +34,17 @@ class Ford extends Car {
 
   @Override
   public String startEngine() {
-    return "The F-150 engine has started";
+    return getClass().getSimpleName() + " " + "The F-150 engine has started";
   }
 
   @Override
   public String accelerate() {
-    return "The F-150 is accelerating";
+    return getClass().getSimpleName() + " " + "The F-150 is accelerating";
   }
 
   @Override
   public String brakeCar() {
-    return "The F-150 is braking";
+    return getClass().getSimpleName() + " " + "The F-150 is braking";
   }
 }
 
@@ -56,17 +56,17 @@ class Honda extends Car {
 
   @Override
   public String startEngine() {
-    return "The Accord engine has started";
+    return getClass().getSimpleName() + " " + "The Accord engine has started";
   }
 
   @Override
   public String accelerate() {
-    return "The Accord is accelerating";
+    return getClass().getSimpleName() + " " + "The Accord is accelerating";
   }
 
   @Override
   public String brakeCar() {
-    return "The Accord is braking";
+    return getClass().getSimpleName() + " " + "The Accord is braking";
   }
 }
 
@@ -78,17 +78,17 @@ class Toyota extends Car {
 
   @Override
   public String startEngine() {
-    return "The Camry engine has started";
+    return getClass().getSimpleName() + " " + "The Camry engine has started";
   }
 
   @Override
   public String accelerate() {
-    return "The Camry is accelerating";
+    return getClass().getSimpleName() + " " + "The Camry is accelerating";
   }
 
   @Override
   public String brakeCar() {
-    return "The Camry is braking";
+    return getClass().getSimpleName() + " " + "The Camry is braking";
   }
 }
 
@@ -100,17 +100,17 @@ class NoNameCar extends Car {
 
   @Override
   public String startEngine() {
-    return "The engine will not start on this POS";
+    return getClass().getSimpleName() + " " + "The engine will not start on this POS";
   }
 
   @Override
   public String accelerate() {
-    return "The car isn't even moving dumbass";
+    return getClass().getSimpleName() + " " + "The car isn't even moving dumbass";
   }
 
   @Override
   public String brakeCar() {
-    return "Can't brake what is not even moving";
+    return getClass().getSimpleName() + " " + "Can't brake what is not even moving";
   }
 }
 
@@ -119,10 +119,17 @@ public class Main {
 
     for (int i = 1; i < 11; i++) {
       Car car = randomCar();
-      assert car != null;
       System.out.println("Car #: " + i + "\n Is the engine started: " + car.startEngine() + "\n Is the car " +
               "accelerating: " + car.accelerate() + "\n Is the car braking: " + car.brakeCar());
     }
+
+//    Car car = new Car("Not a great car", 4);
+//    System.out.println(car.accelerate());
+//
+//    Honda honda = new Honda();
+//    System.out.println(honda.accelerate());
+//    System.out.println(honda.startEngine());
+//    System.out.println(honda.brakeCar());
 
     //
   }
