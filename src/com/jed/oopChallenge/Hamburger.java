@@ -30,8 +30,20 @@ class HealthyBurger extends Hamburger{
 class DeluxeBurger extends Hamburger{
 
 
-  public DeluxeBurger(String name, String breadRollType, String meat, double price) {
+  public DeluxeBurger() {
     super("Deluxe Burger", "Sourdough", "Two 1/2lb Angus Patties", 7.75);
+   super.addChips("Chips", 2.75);
+   super.addDrink("Drink", 1.51);
+  }
+
+  @Override
+  public void addChips(String chips, double chipsPrice) {
+    super.addChips(chips, chipsPrice);
+  }
+
+  @Override
+  public void addDrink(String drink, double drinkPrice) {
+    super.addDrink(drink, drinkPrice);
   }
 }
 
@@ -42,6 +54,12 @@ public class Hamburger {
   private String meat;
   private double meatPrice;
   private double price;
+  private String chips;
+  private double chipsPrice;
+
+  private String drink;
+  private double drinkPrice;
+
 
   private String lettuce;
   private double lettucePrice;
@@ -80,6 +98,16 @@ public class Hamburger {
   public void addCheese(String cheese, double cheesePrice) {
     this.cheese = cheese;
     this.cheesePrice = cheesePrice;
+  }
+
+  public void addChips(String chips, double chipsPrice) {
+    this.chips = chips;
+    this.chipsPrice = chipsPrice;
+  }
+
+  public void addDrink(String drink, double drinkPrice) {
+    this.drink = drink;
+    this.drinkPrice = drinkPrice;
   }
 
   public double addItemsToBurger(){

@@ -8,5 +8,9 @@ burger.addCheese("Cheese", 1.25);
 burger.addLettuce("Lettuce", 1.00);
     price = burger.addItemsToBurger();
 
+    DeluxeBurger db = new DeluxeBurger();
+
+    db.addItemsToBurger();
+
   }
 }
